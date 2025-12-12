@@ -1,67 +1,108 @@
-:root {
-  --brand: #7c9a92;
-  --accent: #c49a6c;
-  --bg: #f7f5f2;
-  --text: #2c2c2c;
-}
-
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
+/* Navigation */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: #eee;
+  padding: 10px 20px;
 }
 
-.navbar ul {
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-.navbar a {
+nav a {
   text-decoration: none;
-  color: var(--brand);
+  color: #333;
   font-weight: bold;
+  text-transform: uppercase; /* Navigation in Großbuchstaben */
 }
 
+/* Hero-Bereich */
 .hero {
-  background-image: url('images/Klangschlalen_2.avif');
+  background: url('images/Klangschalen_2.jpg') no-repeat center center;
   background-size: cover;
-  background-position: center;
   color: white;
   text-align: center;
   padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.section {
+.hero h1, .hero p {
+  margin: 0;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
+  padding: 40px;
+  border-radius: 12px;
+}
+
+/* Über mich */
+.ueber {
   padding: 60px 20px;
+  background: #f9f9f9;
 }
 
 .container {
   display: flex;
-  gap: 30px;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 30px;
+  flex-wrap: wrap; /* sorgt für mobiles Layout */
 }
 
-.portrait, .angebot-img, .testimonial-img {
-  max-width: 400px;
+.portrait {
+  max-width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
+.ueber-text {
+  flex: 1;
+}
+
+.ueber-text h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background: #7c9a92;       /* sanftes Grün */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #5a7a72;       /* dunkleres Grün beim Hover */
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
-  background: white;
-  color: #666;
+  background: #eee;
 }
