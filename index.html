@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Klangraum Hilpoltstein – Klangschalenmassage & Entspannung</title>
-  <style>
-    :root{
-      --bg:#f7f5f2;
-      --text:#2c2c2c;
-      --brand:#7c9a92;
-      --accent:#c49a6c;
-      --white:#ffffff;
-    }
-    body{margin:0;font-family:sans-serif;background:var(--bg);color:var(--text);}
-    header{background:#fff;padding:12px;border-bottom:1px solid #ddd;}
-    nav a{margin:0 10px;text-decoration:none;color:var(--brand);}
-    .hero{
-      padding:80px 20px;text-align:center;
-      background-image:url('images/Klangschlalen_2.avif');
-      background-size:cover;
-      background-position:center;
-      color:white;
-    }
-    .card{background:var(--white);padding:20px;margin:20px;border-radius:10px;box-shadow:0 4px 10px rgba(0,0,0,0.1);}
-    img{max-width:100%;border-radius:10px;margin-bottom:12px;}
-    footer{text-align:center;padding:20px;color:#666;}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KlangOase Hilpoltstein</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Navigation -->
   <header>
-    <nav>
-      <a href="#angebot">Angebot</a>
-      <a href="#ueber">Über mich</a>
-      <a href="#stimmen">Stimmen</a>
-      <a href="#kontakt">Kontakt</a>
+    <nav class="navbar">
+      <div class="logo">KlangOase</div>
+      <ul>
+        <li><a href="#angebot">Angebot</a></li>
+        <li><a href="#ueber">Über mich</a></li>
+        <li><a href="#stimmen">Stimmen</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Hero mit Hintergrundbild -->
+  <!-- Hero -->
   <section class="hero">
-    <h1>Ein Ort für Ruhe und wohltuende Klänge</h1>
-    <p>Willkommen im Klangraum Hilpoltstein</p>
-  </section>
-
-  <!-- Über mich mit Portrait -->
-  <section id="ueber">
-    <div class="card">
-      <h2>Über mich</h2>
-      <img src="images/Brigitte.avif" alt="Brigitte Portrait">
-      <p>Hallo, ich bin Brigitte. Als Yogalehrerin und Klangmassagepraktikerin begleite ich Menschen dabei, in die Stille zu finden und neue Kraft zu schöpfen.</p>
+    <div class="hero-text">
+      <h1>Willkommen in der KlangOase</h1>
+      <p>Ein Ort für Ruhe, Entspannung und wohltuende Klänge</p>
     </div>
   </section>
 
-  <!-- Angebote mit Bild -->
-  <section id="angebot">
-    <div class="card">
-      <h2>Angebote</h2>
-      <img src="images/Behandlung.avif" alt="Behandlung">
-      <p>Basis-Klangmassage · 60 Minuten · 60 €</p>
-      <p>Individuelle Klangmassage · 60 Minuten · 65 €</p>
-      <p>Junior-Klangmassage · 45 Minuten · 45 €</p>
+  <!-- Über mich -->
+  <section id="ueber" class="section">
+    <div class="container">
+      <img src="images/Brigitte.avif" alt="Brigitte Portrait" class="portrait">
+      <div>
+        <h2>Über mich</h2>
+        <p>Ich bin Brigitte, Yogalehrerin und Klangmassagepraktikerin. Mit Klangschalen begleite ich Menschen dabei, in die Stille zu finden und neue Kraft zu schöpfen.</p>
+      </div>
     </div>
   </section>
 
-  <!-- Stimmen mit dekorativem Bild -->
-  <section id="stimmen">
-    <div class="card">
-      <h2>Stimmen von Besucherinnen</h2>
-      <img src="images/Klangschalen.avif" alt="Klangschalen">
-      <blockquote>„Ich habe selten so schnell losgelassen. Die Klänge tragen – und danach fühlte ich mich leicht.“</blockquote>
-      <blockquote>„Warm, achtsam, professionell. Ein Ort, an dem man wirklich zur Ruhe kommt.“</blockquote>
+  <!-- Angebot -->
+  <section id="angebot" class="section">
+    <div class="container">
+      <div>
+        <h2>Angebote</h2>
+        <ul>
+          <li>Basis-Klangmassage · 60 Minuten · 60 €</li>
+          <li>Individuelle Klangmassage · 60 Minuten · 65 €</li>
+          <li>Junior-Klangmassage · 45 Minuten · 45 €</li>
+        </ul>
+      </div>
+      <img src="images/Klangschalen.avif" alt="Klangschalen" class="angebot-img">
+    </div>
+  </section>
+
+  <!-- Stimmen -->
+  <section id="stimmen" class="section">
+    <div class="container">
+      <img src="images/Klangschalen_1.avif" alt="Klangschalen dekorativ" class="testimonial-img">
+      <div>
+        <h2>Stimmen von Besucherinnen</h2>
+        <blockquote>„Ich habe selten so schnell losgelassen. Die Klänge tragen – und danach fühlte ich mich leicht.“</blockquote>
+        <blockquote>„Warm, achtsam, professionell. Ein Ort, an dem man wirklich zur Ruhe kommt.“</blockquote>
+      </div>
     </div>
   </section>
 
   <!-- Kontakt -->
-  <section id="kontakt">
-    <div class="card">
+  <section id="kontakt" class="section">
+    <div class="container">
       <h2>Kontakt</h2>
       <p>Adresse: Musterstraße 12, 91161 Hilpoltstein</p>
       <p>Telefon: 0151 000 000 00</p>
@@ -84,7 +77,7 @@
   </section>
 
   <footer>
-    © <span id="year"></span> Klangraum Hilpoltstein
+    © <span id="year"></span> KlangOase Hilpoltstein
   </footer>
 
   <script>
