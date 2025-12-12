@@ -53,10 +53,15 @@ nav a {
 }
 
 .hero-text {
-  background: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
-  padding: 40px 60px;
-  border-radius: 12px;
+  background: none;       /* kein Hintergrund */
+  padding: 40px 60px;     /* Abstand bleibt, damit der Text nicht am Rand klebt */
+  border-radius: 0;       /* keine abgerundeten Ecken */
   max-width: 700px;
+}
+
+/* Lesbarkeit verbessern mit Textschatten */
+.hero h1, .hero h2, .hero p {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
 }
 
 .hero h1 {
