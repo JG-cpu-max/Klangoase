@@ -14,15 +14,16 @@ body {
 }
 
 .logo {
-  height: 100px;       /* Höhe des Logos */
+  height: 120px;       /* Höhe des Logos */
   width: auto;        /* Breite proportional */
   margin-right: 20px; /* Abstand zur Navigation */
+  object-fit: contain;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 25px;
   margin: 0;
   padding: 0;
 }
@@ -36,14 +37,15 @@ nav a {
 
 /* Hero-Bereich */
 .hero {
-  background: url('images/Klangschalen_2.jpg') no-repeat center center;
+  background: url('images/Klangschalen_2.avif') no-repeat center center;
   background-size: cover;
-  color: white;
-  text-align: center;
-  padding: 120px 20px;
+  min-height: 80vh;             /* fast volle Bildschirmhöhe */
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
 }
 
 .hero h1, .hero p {
@@ -52,8 +54,26 @@ nav a {
 
 .hero-text {
   background: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
-  padding: 40px;
+  padding: 40px 60px;
   border-radius: 12px;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.hero p:last-of-type {
+  font-size: 1.2rem;
+  margin: 0;
 }
 
 /* Über mich */
