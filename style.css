@@ -14,8 +14,9 @@ body {
 }
 
 .logo {
-  height: 50px;
-  width: auto;
+  height: 100px;       /* Höhe des Logos */
+  width: auto;        /* Breite proportional */
+  margin-right: 20px; /* Abstand zur Navigation */
 }
 
 nav ul {
