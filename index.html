@@ -3,8 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KlangOase Hilpoltstein</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Herzlich Willkommen in der KlangOase | Klangmassage | Hilpoltstein</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="style_angebot.css">
+   <link rel="stylesheet" href="style_a-felder.css">
+   <link rel="stylesheet" href="style_hess.css">
+<!-- Hier kommt das Favicon -->
+  <link rel="icon" type="image/avif" href="images/Logo_Baum_final.avif">
+<!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Navigation mit Logo -->
@@ -12,12 +19,12 @@
     <nav class="navbar">
       <img src="images/Logo_Baum_final.avif" alt="KlangOase Logo" class="logo">
       <ul>
-        <li><a href="#home">Start</a></li>
-        <li><a href="#ueber">Über mich</a></li>
-        <li><a href="#angebot">Verwöhnangebot</a></li>
-        <li><a href="#angebot">Anwendungsfelder</a></li>
-        <li><a href="#angebot">Über die Peter Hess-Klangmassage</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
+        <li><a href="index.html">Übersicht</a></li>
+        <li><a href="ueber.html">Über mich</a></li>
+        <li><a href="V-Angebot.html">Verwöhnangebot</a></li>
+        <li><a href="A-Felder.html">Anwendungsfelder</a></li>
+        <li><a href="Hess.html">Über die Peter Hess-Klangmassage</a></li>
+        <li><a href="index.html#kontakt">Kontakt</a></li>
       </ul>
     </nav>
   </header>
@@ -25,7 +32,6 @@
  <!-- Hero-Bereich -->
 <section id="home" class="hero">
   <div class="hero-text">
-    <h1>Willkommen in der KlangOase</h1>
     <h1>Dein Raum für Ruhe, Entspannung und Regeneration</h1>
     <h2>Brigitte Schneider</h2>
     <p>PRAXIS FÜR PETER HESS®-KLANGSCHALENMASSAGE</p>
@@ -36,18 +42,154 @@
 <section id="ueber" class="ueber">
   <div class="container">
     <img src="images/Brigitte.avif" alt="Brigitte" class="portrait">
-    <div class="ueber-text">
+    <div class="textblock">
       <h2>Das bin ich</h2>
       <p>
-        Hallo, ich freue mich Dich auf meiner Homepage begrüßen zu dürfen!
-        Ich bin Brigitte und ich lebe idyllisch in Hilpoltstein, genauer gesagt in Marquardsholz. 
+        Hallo, ich freue mich Dich auf meiner Homepage begrüßen zu dürfen! <p>
+        <p> Ich bin Brigitte und ich lebe idyllisch in Hilpoltstein, genauer gesagt in Marquardsholz. 
         Ich bin langjährige Yogalehrerin und habe mich 2020 dazu entschlossen eine Ausbildung zur 
-        Peter Hess®- Klangmassagepraktikerin zu absolvieren.
-        Ich bin sehr dankbar, Dir diese besondere Art der Gesundheitsförderung bei mir zu Hause in meiner "KlangOase" anbieten zu dürfen.
+        Peter Hess®- Klangmassagepraktikerin zu absolvieren.<p>
+        <p> Ich bin sehr dankbar, Dir diese besondere Art der Gesundheitsförderung bei mir zu Hause in meiner "KlangOase" anbieten zu dürfen.
       </p>
     </div>
   </div>
 </section>
 
-        <!-- Button -->
-        <a href="ueber.html" class="btn">
+<section class="leistungen">
+     
+     <h2>Verwöhnangebote</h2>
+     <div class="angebot-grid">
+
+      <!-- Container als Link -->
+       <a href="V-Angebot.html#Basis_Angebot" class="angebot">
+      <h2>Basis Klangmassage</h2>
+      <p>Sanfte Klänge bringen Körper und Geist in Einklang.</p>
+ 	<p> </p>
+       <p>60 Verwöhnminuten</p>
+      <p>60 €</p>
+      <img src="images/Detail_1.jpg" alt="Klangschale" />
+      </a>
+
+      <a href="V-Angebot.html#Indi_Angebot" class="angebot">
+      <h2>Individuelle Faszien Klangmassagen</h2>
+      <p>Gezielte Schwingungen lösen Verspannungen und fördern Beweglichkeit.</p>
+      <p>60 Verwöhnminuten</p>
+      <p>60 €</p>
+      <img src="images/Detail_1.jpg" alt="Klangschale" />
+      </a>
+
+      <a href="V-Angebot.html#Junior_Angebot" class="angebot">
+      <h2>Junior Klangmassage</h2>
+      <p>Eine spielerische Klangreise für Kinder zur Entspannung.</p>
+      <p>60 Verwöhnminuten</p>
+      <p>45 €</p>
+      <img src="images/Detail_1.jpg" alt="Klangschale" />
+      </a>
+  
+   </div>
+</section>
+
+<section class="gästebuch">
+  <h2>Gästebuch</h2>
+  <div class="gästebuch-grid">
+
+    <div class="gästebuch-item">
+      <h3>Angie aus Hilpoltstein</h3>
+      <p>
+        Ich kam mit Verspätung und etwas gehetzt bei Brigitte an. Sie empfing mich trotzdem sehr ruhig und gelassen
+        und führte mich in einen hellen, warmen Raum, der von einem wohltuenden Duft durchzogen war. Ich fühlte mich
+        sofort wohl und willkommen. Nach einem kurzen Gespräch über mein Befinden durfte ich mich auf die äußerst
+        bequeme Massagebank legen und Brigitte begann, von den Füssen Richtung Kopf, mit verschiedenen Klangschalen
+        meinen Körper in Schwingung zu bringen. Allerdings kann ich den einzelnen Ablauf nicht mehr beschreiben,
+        weil ich sehr schnell in einen angenehmen Trancezustand versetzt wurde. Ich bin eher der hektische Mensch
+        und kann auch mein Gedankenkarussell schlecht abstellen. Aber hier habe ich mich derart entspannt und sicher
+        gefühlt, dass ich ganz beseelt den restlichen Tag verbracht habe. Eine tolle Erfahrung, die ich gerne
+        wiederholen möchte.
+      </p>
+    </div>
+
+    <div class="gästebuch-item">
+      <h3>Ruth aus Bamberg</h3>
+      <p>
+        Ich war für eine kurze Auszeit am Rothsee und habe mir eine Klangmassage bei Brigitte gegönnt. Die
+        Klangmassage war eine echte Wohltat. Ich konnte mich richtig fallen lassen und entspannen. Bei Brigitte
+        kann man sich auch einfach nur wohl fühlen. Es sind neben den Klängen die vielen Details, die von Herzen
+        kommen und berühren. Ich kann diese Erfahrung nur empfehlen!
+      </p>
+    </div>
+
+    <div class="gästebuch-item">
+      <h3>Luisa aus Nürnberg</h3>
+      <p>
+        Da ich immer mal wieder Nackenverspannungen habe und allgemein Probleme mich im Alltag zu entspannen,
+        habe ich die Klangoase von Brigitte aufgesucht. Ich wurde herzlich empfangen und der Raum lädt sofort
+        zur Entspannung ein. Ich hatte mich für die Faszienklangmassage entschieden. Dabei gleiten die
+        angeschlagenen Klangschalen sanft über den Körper – ein unbeschreibliches Gefühl. Ich war sofort
+        tiefenentspannt. Während der Klangmassage spürte ich ein leichtes Ziehen neben meiner Brustwirbelsäule.
+        An dieser Stelle hatte ich vor Jahren Probleme (von hier rühren meine Nackenverspannungen). Anschließend
+        bekam ich noch eine wohltuende Nackenmassage und eine Vagusnervmassage. Mein Besuch in der Klangoase war
+        wirklich ein einmaliges Erlebnis, danach fühle ich mich sanft eingehüllt und so entspannt wie lange nicht
+        mehr. Nur zu empfehlen! Ich werde auf jeden Fall wieder kommen.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<section class="kontakt" id="kontakt" >     
+  <h2>Kontakt</h2>
+  <div class="kontakt-grid">
+    <div class="kontakt-item">
+      <h3>Adresse</h3>
+      <p>
+        Klangoase <br>
+        Brigitte Schneider <br>
+        Marquardsholz E5<br>
+        91161 Hilpoltstein
+      </p>
+    </div>
+    <div class="kontakt-item">
+      <h3>E-Mail</h3>
+      <p><a href="mailto:brigitterosina@t-online.de">brigitterosina@t-online.de</a></p>
+      <p><a href="mailto:brigitte.schneider@klangoase-hip.de">brigitte.schneider@klangoase-hip.de</a></p>
+    </div>
+    <div class="kontakt-item">
+      <h3>Telefon</h3>
+      <p><a href="tel:+4915170876928">0151 708 769 28</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Button zum Verwöhnangebot -->
+<div style="text-align:center; margin-top:30px;">
+  <a href="angebot.html" class="btn">Verwöhnangebot &gt;</a>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <!-- Linke Spalte -->
+    <div class="footer-left">
+      <h3>Brigitte Schneider</h3>
+      <p>Tel: <a href="tel:+4915170876928">0151 708 769 28</a></p>
+      <p>E-Mail: <a href="mailto:brigitterosina@t-online.de">brigitterosina@t-online.de</a></p>
+    </div>
+
+    <!-- Rechte Spalte -->
+    <div class="footer-right">
+      <div class="footer-content">
+        <div class="footer-images">
+          <img src="images/Logo_fuer_Mitglieder.avif" alt="Logo für Mitglieder">
+          <img src="images/Berufsverband.avif" alt="Berufsverband">
+        </div>
+        <div class="footer-text">
+          <p>Ich bin Mitglied im Internationalen Fachverband Klang-Massage-Therapie e.V.</p>
+          <p>Der Internationale Fachverband Klang-Massage-Therapie e.V. ist Verbands-Mitglied im Dachverband für freie beratende und Gesundheit fördernde Berufe e.V.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
