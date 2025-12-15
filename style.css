@@ -1,7 +1,13 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif; /* gilt für die ganze Seite */
   line-height: 1.6;
+
+}
+
+/* Überschriften separat mit Raleway */
+h1, h2, h3 {
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Navigation */
@@ -43,7 +49,7 @@ nav a {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: right;
   color: white;
   position: relative;
 }
@@ -56,7 +62,7 @@ nav a {
   background: none;       /* kein Hintergrund */
   padding: 40px 60px;     /* Abstand bleibt, damit der Text nicht am Rand klebt */
   border-radius: 0;       /* keine abgerundeten Ecken */
-  max-width: 700px;
+  max-width: 1400px;
 }
 
 /* Lesbarkeit verbessern mit Textschatten */
@@ -83,36 +89,385 @@ nav a {
 
 /* Über mich */
 .ueber {
-  padding: 60px 20px;
+  padding: 10px 20px;
   background: #f9f9f9;
 }
 
 .container {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap; /* sorgt für mobiles Layout */
+  align-items: flex-start; /* Bild und Text oben ausrichten */
+  gap: 60px;               /* Abstand zwischen Bild und Text */
+  flex-wrap: wrap;         /* sorgt für mobiles Layout */ 
 }
 
 .portrait {
-  max-width: 300px;
+  max-width: 600px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.ueber-text {
-  flex: 1;
+.textblock {
+   width: 40%; /* für prozentuale Breite */
 }
 
-.ueber-text h2 {
-  margin-top: 0;
+.leistungen {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.leistungen h1 {
+  margin-bottom: 40px;
+  font-family: 'Raleway', sans-serif;
   color: #333;
+}
+
+.angebot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Standard: 3 Spalten */
+  gap: 30px;
+}
+
+/* Quadratische Container */
+.angebot {
+  aspect-ratio: 1 / 1;          /* quadratisch */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;  /* Inhalte oben ausrichten */
+  align-items: center;          /* horizontal zentrieren */
+  padding: 20px;
+  padding-top: 80px;            /* definierter Abstand vom oberen Rand */
+  border-radius: 12px;
+  background: #e6f0ed;          /* Hintergrundfarbe */
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  text-align: center;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.angebot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none; /* verhindert Unterstreichung */
+  color: inherit;        /* übernimmt die Textfarbe */
+}
+
+.angebot img {
+  width: 70%;          /* Bild füllt die Containerbreite */
+  aspect-ratio: 1 / 1;  /* quadratisch */
+  object-fit: cover;    /* proportional, sauber zugeschnitten */
+  border-radius: 8px;
+  margin-top: 20px;  /* Abstand zum Text */}
+}
+
+.angebot:hover {
+  background: #dce8e5;
+  transform: translateY(-5px);
+}
+
+.angebot h2 {
+  margin: 0 0 10px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  color: #7c9a92;
+}
+
+.angebot p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  line-height: 1.4;
+}
+
+/* für exakten Sprung auf Angebotsseite */
+html {
+  scroll-behavior: smooth; /* sanftes Scrollen */
+}
+
+.v-angebot2 {
+  scroll-margin-top: 20vh; /* sorgt für Abstand beim Sprung */
+}
+
+/* Tablet: 2 Spalten */
+@media (max-width: 900px) {
+  .angebot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Handy: 1 Spalte */
+@media (max-width: 600px) {
+  .angebot-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gästebuch {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.gästebuch {
+  position: relative;
+  padding: 60px 20px;
+  text-align: center;
+  background: url('images/Behandlung.avif') no-repeat center center;
+  background-size: cover; /* Bild füllt den Bereich */
+  overflow: hidden;       /* verhindert, dass das Overlay übersteht */
+}
+
+/* halbtransparentes Overlay in Grün */
+.gästebuch::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(124, 154, 146, 0.35); /* sanftes Grün mit Transparenz */
+  z-index: 0;
+}
+
+.gästebuch-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1; /* sorgt dafür, dass die Boxen über dem Overlay liegen */
+}
+
+.gästebuch-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  border-radius: 12px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.gästebuch-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.gästebuch-item h3 {
+  margin: 0 0 15px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7c9a92;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+  min-height: 50px;
+}
+
+.gästebuch-item p {
+  margin: 0 0 12px 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Tablet: 2 Spalten */
+@media (max-width: 900px) {
+  .gästebuch-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Handy: 1 Spalte */
+@media (max-width: 600px) {
+  .gästebuch-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.kontakt {
+  padding: 60px 20px;
+  background: #f4f7f6; /* dezenter Hintergrund */
+  text-align: center;
+}
+
+.kontakt h2 {
+  margin-bottom: 40px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: #333;
+}
+
+.kontakt-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Desktop: 3 Spalten */
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.kontakt-item {
+  padding: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.kontakt-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.kontakt-item h3 {
+  margin: 0 0 15px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7c9a92;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.kontakt-item p {
+  margin: 0 0 12px 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;          /* einheitlich grau */
+  line-height: 1.5;
+}
+
+.kontakt-item a {
+  color: #444;          /* Links ebenfalls grau */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.kontakt-item a:hover {
+  color: #7c9a92;       /* beim Hover grün */
+  text-decoration: underline;
+}
+
+
+/* Tablet: 2 Spalten */
+@media (max-width: 900px) {
+  .kontakt-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Handy: 1 Spalte */
+@media (max-width: 600px) {
+  .kontakt-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Footer Grundlayout */
+.site-footer {
+  background: #7c9a92;       /* Akzentfarbe */
+  color: #fff;               /* weiße Schrift */
+  padding: 40px 20px;
+  margin-top: 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* links schmaler, rechts breiter */
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Linke Spalte */
+.footer-left h3 {
+  margin: 0 0 15px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+}
+
+.footer-left p {
+  margin: 5px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.footer-left a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+  color: #e0e0e0;
+}
+
+/* Rechte Spalte */
+.footer-right {
+  display: flex;
+  justify-content: flex-end; /* schiebt den Block nach rechts */
+}
+
+.footer-right .footer-content {
+  display: flex;
+  align-items: center;   /* Bilder und Text auf gleicher Höhe */
+  gap: 20px;
+}
+
+/* Bilder */
+.footer-images {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-images img {
+  height: auto;          /* behält Proportionen */
+  width: auto;
+  max-height: 140px;     /* höhere Logos */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Textblock */
+.footer-text {
+  max-width: 350px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.footer-text p {
+  margin: 0 0 8px 0;
+}
+
+/* Responsive Anpassung */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-right {
+    justify-content: center;
+  }
+  .footer-right .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-images {
+    justify-content: center;
+  }
+  .footer-text {
+    max-width: 100%;
+    font-size: 0.95rem;
+  }
 }
 
 /* Button */
 .btn {
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 12px 24px;
   background: #7c9a92;       /* sanftes Grün */
   color: white;
@@ -126,9 +481,23 @@ nav a {
   background: #5a7a72;       /* dunkleres Grün beim Hover */
 }
 
-/* Footer */
-footer {
-  text-align: center;
+
+.zitat {
+  margin: 20px auto 20px auto;
   padding: 20px;
-  background: #eee;
+  max-width: 800px;       /* sorgt dafür, dass es nicht zu breit wird */
+  text-align: center;     /* Text zentrieren */
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #555;
+  background: #f9f9f9;
+  border-top: 3px solid #7c9a92;
+  border-bottom: 3px solid #7c9a92;
+}
+
+.zitat footer {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #7c9a92;
 }

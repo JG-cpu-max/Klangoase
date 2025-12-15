@@ -1,0 +1,91 @@
+
+.v-angebot {
+  padding-top: 40px;
+  padding-right: 20px;
+  padding-bottom: 10px;  /* kleiner Abstand nach unten */
+  padding-left: 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.v-angebot h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.v-angebot-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+  color: #444;
+  line-height: 1.6;
+  text-align: left;        /* Text linksbündig */
+}
+
+.v-angebot2 {
+  margin-bottom: 40px;   /* Abstand nach unten */
+}
+
+.v-angebot2-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  max-width: 50%;      /* Gesamtbreite = 50% der Seite */
+  margin: 0 auto;
+}
+
+.angebot-foto,
+.v-angebot2-text {
+  flex: 1;             /* beide gleich breit */
+}
+
+.angebot-foto {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.v-angebot2-text {
+  font-size: 0.9rem;   /* kleinere Schriftgröße */
+  line-height: 1.4;
+}
+
+.v-angebot2-tabelle {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #444;
+  table-layout: fixed;   /* feste Spaltenbreiten */
+}
+
+.v-angebot2-tabelle td {
+  padding: 6px 10px;
+  overflow-wrap: break-word; /* falls Text zu lang wird */
+}
+
+.v-angebot2-tabelle td:first-child {
+  width: 40%;   /* erste Spalte */
+}
+
+.v-angebot2-tabelle td:nth-child(2) {
+  width: 50%;   /* zweite Spalte breiter */
+}
+
+.v-angebot2-tabelle td:last-child {
+  width: 10%;   /* dritte Spalte */
+  text-align: right;
+  white-space: nowrap; /* verhindert Umbruch bei "65 €" */
+}
+
+@media (max-width: 900px) {
+  .v-angebot-container {
+    flex-direction: column;
+    max-width: 90%; /* auf kleinen Screens fast volle Breite */
+  }
+
+

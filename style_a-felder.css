@@ -1,0 +1,94 @@
+.a-felder {
+  max-width: 900px;       /* gesamte Breite begrenzen */
+  margin: 0 auto;         /* mittig auf der Seite */
+  padding: 40px 20px;     /* Innenabstände */
+  background: #f9f9f9;    /* dezenter Hintergrund */
+  text-align: center;     /* Überschrift mittig */
+}
+
+.a-felder h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.a-felder-text {
+  max-width: 700px;       /* Textblock schmaler */
+  margin: 0 auto;         /* mittig */
+  text-align: center;     /* Text zentriert */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Bereich unter dem Zitat */
+.container-bereich {
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.container-heading {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Container-Reihe */
+.container-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* sorgt für Umbruch auf kleineren Screens */
+}
+
+/* Einzelne Container */
+.container-item {
+  flex: 1;
+  min-width: 200px; /* verhindert zu schmale Boxen */
+  background-color: #f9f6f2;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #a67c52;
+}
+
+.container-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #555;
+}
+
+/* Hover-Effekt */
+.container-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container-item {
+    max-width: 500px;
+    width: 100%;
+  }
+}
+
+body.a-felder-hintergrund {
+  background: url('images/Behandlung.avif') no-repeat center center fixed;
+  background-size: cover;
+}
+

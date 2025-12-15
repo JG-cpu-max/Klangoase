@@ -1,0 +1,70 @@
+.hess {
+  max-width: 900px;       /* gesamte Breite begrenzen */
+  margin: 0 auto;         /* mittig auf der Seite */
+  padding: 40px 20px;     /* Innenabstände */
+  background: #f9f9f9;    /* dezenter Hintergrund */
+  text-align: center;     /* Überschrift mittig */
+}
+
+.hess h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hess-text {
+  max-width: 700px;       /* Textblock schmaler */
+  margin: 0 auto;         /* mittig */
+  text-align: center;     /* Text zentriert */
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Gemeinsames Layout für Bild/Text-Reihen */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+.content-text {
+  flex: 1;
+}
+
+.content-text h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.8rem;
+  color: #a67c52;
+  margin-bottom: 15px;
+}
+
+.content-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.content-image {
+  flex: 1;
+  text-align: center;
+}
+
+.content-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Responsives Verhalten */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    text-align: center;
+  }
+}
