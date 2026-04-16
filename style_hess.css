@@ -2,15 +2,16 @@
   max-width: 900px;       /* gesamte Breite begrenzen */
   margin: 0 auto;         /* mittig auf der Seite */
   padding: 40px 20px;     /* Innenabstände */
-  background: #f9f9f9;    /* dezenter Hintergrund */
+  /* background: #f9f9f9; */   /* dezenter Hintergrund */
   text-align: center;     /* Überschrift mittig */
 }
 
 .hess h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 2rem;
-  color: #333;
-  margin-bottom: 20px;
+  /* color: #333; */ /* Schriftfarbe schwarz Überschrift h2 */ 
+  color: #a67c52; /* Schriftfarbe Überschrift h2 */  
+ margin-bottom: 20px;
 }
 
 .hess-text {
@@ -39,14 +40,14 @@
 .content-text h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 1.8rem;
-  color: #a67c52;
+  color: #a67c52; /* Schriftfarbe Überschrift Textblock */ 
   margin-bottom: 15px;
 }
 
 .content-text p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #333;
+  /* color: #333; */
 }
 
 .content-image {
