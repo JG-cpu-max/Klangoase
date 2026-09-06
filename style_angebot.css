@@ -83,9 +83,22 @@
 }
 
 @media (max-width: 900px) {
-  .v-angebot-container {
+  .v-angebot2-container {
     flex-direction: column;
     max-width: 90%; /* auf kleinen Screens fast volle Breite */
   }
+}
 
+@media (max-width: 600px) {
+  .v-angebot2-container {
+    max-width: 100%;
+  }
 
+  .v-angebot2-tabelle {
+    font-size: 0.8rem;
+  }
+
+  .v-angebot2-tabelle td {
+    padding: 6px 4px;
+  }
+}

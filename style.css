@@ -196,6 +196,27 @@ nav a:hover::after {
   margin: 0;
 }
 
+/* Handy: Hero-Text verkleinern und Abstände reduzieren */
+@media (max-width: 600px) {
+  .hero-text {
+    padding: 30px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 14px;
+  }
+
+  .hero-name {
+    font-size: 1.4rem;
+    margin-top: 16px;
+  }
+
+  .hero p:last-of-type {
+    font-size: 1rem;
+  }
+}
+
 /* Dekorative Überschriften für Abschnitte */
 .leistungen h2,
 .gästebuch h2,
@@ -243,12 +264,18 @@ nav a:hover::after {
 
 .portrait {
   max-width: 600px;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+  flex: 1 1 300px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .textblock {
    width: 40%; /* für prozentuale Breite */
+   min-width: 280px;
+   flex: 1 1 280px;
 }
 
 .leistungen {
