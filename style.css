@@ -1,3 +1,8 @@
+/* Innenabstände zählen zur Breite -> verhindert Überlauf am Bildschirmrand */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif; /* gilt für die ganze Seite */
